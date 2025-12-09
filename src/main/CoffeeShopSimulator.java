@@ -1,4 +1,4 @@
-package main;/* *
+/* *
  * Author: Tharin Deelaka Mahale
  * UoW ID: W1833548
  * IIT ID: 20200709
@@ -6,6 +6,7 @@ package main;/* *
  * Unit: Coursework
  * Scenario: 1
  * */
+package main;
 import main.coffeeShop.CoffeeShop;
 import main.coffeeShop.CoffeeShopInstance;
 import main.people.Barista;
