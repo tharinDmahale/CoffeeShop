@@ -11,4 +11,4 @@ Simple Java simulation of customers and baristas interacting with a coffee shop 
 - IntelliJ: Open the project, locate `CoffeeShopSimulator.main` and run it.
 
 ## Project structure
-- `src/main` — application sources (main classes)
+- `src/main` — application sources
