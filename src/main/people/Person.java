@@ -24,4 +24,8 @@ public abstract class Person {
     public final void start() {
         this.thread.start();
     }
+
+    public final void join() throws InterruptedException {
+        this.thread.join();
+    }
 }

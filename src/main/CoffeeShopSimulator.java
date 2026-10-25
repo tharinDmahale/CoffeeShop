@@ -22,7 +22,7 @@ import java.util.stream.Stream;
 
 public final class CoffeeShopSimulator {// Main class
     private static final int MAX_CAPACITY = 5;
-    private static final int NUMBER_OF_PEOPLE = 15;
+    private static final int NUMBER_OF_PEOPLE = 10;
 
     private CoffeeShopSimulator() {}
 
@@ -39,5 +39,12 @@ public final class CoffeeShopSimulator {// Main class
         final List<Person> people = Stream.concat(Arrays.stream(customers), Arrays.stream(baristas)).collect(Collectors.toList());
         Collections.shuffle(people);// To simulate the randomness of placing and preparing orders
         people.forEach(person -> person.start());
+        people.forEach(person -> {
+            try {
+                person.join();
+            } catch (final InterruptedException ie) {
+                ie.printStackTrace();
+            }
+        });
     }
 }

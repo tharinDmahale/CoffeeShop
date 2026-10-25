@@ -16,7 +16,7 @@ public final class Customer extends Person implements Runnable {
 
     public Customer(final CoffeeShop coffeeShop, final int number) {
         super(number);
-        this.thread = new Thread(this, this.toString());
+        this.thread = Thread.ofVirtual().name(this.toString()).unstarted(this);
         this.coffeeShop = (CoffeeShopForCustomer) coffeeShop;
     }
 
